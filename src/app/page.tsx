@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
   const features = [
     "Funds",
@@ -20,6 +23,14 @@ export default function Home() {
             Simple accounts, reporting, and fund tracking for small UK
             charities.
           </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild>
+              <Link href="/sign-up">Sign up</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href="/sign-in">Sign in</Link>
+            </Button>
+          </div>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

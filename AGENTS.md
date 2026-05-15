@@ -38,6 +38,18 @@ notices.
 - Explain all changed files
 - Use async route params correctly for Next.js 16
 
+## Authentication
+
+- Use Better Auth v1.6.11
+- Use Drizzle adapter with Neon Postgres
+- Auth should be server-side by default
+- Do not expose auth secrets to the client
+- Start with email/password auth
+- Add organisation/team membership later
+- Protect app routes before building business modules
+- Public routes: landing page, sign in, sign up
+- Protected routes: dashboard, charities, funds, transactions, reports, settings
+
 ## Business Rules
 
 - Journals are immutable after posting
