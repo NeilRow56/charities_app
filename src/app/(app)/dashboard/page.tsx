@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { signOut } from "@/lib/auth-actions";
 import { auth } from "@/lib/auth";
-import { Button } from "@/components/ui/button";
+import { SignOutButton } from "@/components/auth/sign-out-button";
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -28,11 +27,7 @@ export default async function DashboardPage() {
               Signed in as {session?.user.email}
             </p>
           </div>
-          <form action={signOut}>
-            <Button type="submit" variant="outline">
-              Sign out
-            </Button>
-          </form>
+          <SignOutButton />
         </div>
 
         <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
