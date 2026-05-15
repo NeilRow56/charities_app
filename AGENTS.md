@@ -90,3 +90,55 @@ notices.
 - Use Tailwind only
 - Prefer responsive layouts
 - Keep styling professional and accounting-focused
+
+## Environment Variables
+
+### Local Development
+
+Local development uses `.env.local`.
+
+After adding or changing environment variables:
+
+- restart the dev server
+- never commit `.env.local`
+
+### Vercel Deployment
+
+Production deployments require matching environment variables in Vercel Project
+Settings.
+
+Required variables currently include:
+
+```env
+DATABASE_URL=
+BETTER_AUTH_SECRET=
+BETTER_AUTH_URL=
+```
+
+### BETTER_AUTH_URL Rules
+
+Local:
+
+```env
+BETTER_AUTH_URL=http://localhost:3000
+```
+
+Production:
+
+```env
+BETTER_AUTH_URL=https://charities-app.vercel.app
+```
+
+Always update BETTER_AUTH_URL after:
+
+- changing production domains
+- adding custom domains
+- cloning projects
+- creating preview environments
+
+### Security
+
+- Never expose secrets in client components
+- Never commit production secrets
+- Use server-side environment variables only
+- Keep auth and database credentials private
